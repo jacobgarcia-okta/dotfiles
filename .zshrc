@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf jira ssh-agent fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,3 +105,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias kc=kubectl
+alias kev="kubectl get ev --sort-by=lastTimestamp"
+alias kns="kubectl config set-context --current --namespace"
+alias nocolor="gsed -r 's:\x1B\[([0-9]{1,3}(;[0-9]{1,2}(;[0-9]{1,2})?)?)?[m|K]::g'"
